@@ -7,9 +7,16 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app">
+    <div id="app" class="min-h-max font-rubik">
       <header class="bg-neutral-200 py-8">
-        <nav class="flex flex-row gap-12 justify-center font-rubik">
+        <nav class="flex flex-row gap-12 justify-center items-center">
+          <div>
+            <img
+              src="https://media.tenor.com/X_p1Oq3n4FMAAAAM/butter-dog-dog.gif"
+              alt=""
+              class="w-8 rounded-4xl"
+            />
+          </div>
           <ul class="flex flex-row gap-12">
             <li
               class="hover:scale-125 transition duration-300 ease-in-out text-xl font-bold"
@@ -123,7 +130,26 @@
           </div>
         </nav>
       </header>
-      <div></div>
+      <main>
+        <section
+          id="hero"
+          class="min-h-svh bg-cover flex flex-col place-items-center justify-center bg-[url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1108099%2Fpexels-photo-1108099.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-chevanon-photography-1108099.jpg%26fm%3Djpg&f=1&nofb=1&ipt=d91d12428efea60bfc798a635a1e79ce957bc6f11f26fdb257a80932e6e7202d)]"
+        >
+          <div class="text-center">
+            <h2 class="text-3xl">אני ליבי</h2>
+            <h3 class="text-3xl">ליבי מאלפת מעלפת</h3>
+            <a class="text-3xl bg-amber-500">דברו איתי</a>
+          </div>
+        </section>
+
+        <section>
+          <div>טקסט מעניין</div>
+        </section>
+        <section><div>טופס צור קשר</div></section>
+      </main>
+      <footer>
+        <div>פרטים ליצור קשר</div>
+      </footer>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
