@@ -5,7 +5,7 @@
   --font-rubik: "Rubik", sans-serif;
 }
 
-.hamburger {
+#hamburger {
   position: absolute;
   width: 60px;
   height: 60px;
@@ -14,7 +14,7 @@
   transition-duration: 0.5s;
 }
 
-.hamburger .icon {
+#hamburger .icon {
   transition-duration: 0.5s;
   position: absolute;
   height: 4px;
@@ -23,7 +23,7 @@
   background-color: #212121;
 }
 
-.hamburger .icon:before {
+#hamburger .icon:before {
   transition-duration: 0.5s;
   position: absolute;
   width: 30px;
@@ -33,7 +33,7 @@
   top: -10px;
 }
 
-.hamburger .icon:after {
+#hamburger .icon:after {
   transition-duration: 0.5s;
   position: absolute;
   width: 30px;
@@ -43,19 +43,19 @@
   top: 10px;
 }
 
-.hamburger.open .icon {
+#hamburger.open .icon {
   transition-duration: 0.5s;
   background: transparent;
 }
 
-.hamburger.open .icon:before {
+#hamburger.open .icon:before {
   transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px);
 }
 
-.hamburger.open .icon:after {
+#hamburger.open .icon:after {
   transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px);
 }
 
-.hamburger:hover {
+#hamburger:hover {
   cursor: pointer;
 }
