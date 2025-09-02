@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he" dir="rtl" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Butterdog</title>
   </head>
   <body>
     <div id="app" class="min-h-max font-rubik">
@@ -142,20 +142,51 @@
       <main>
         <section
           id="hero"
-          class="min-h-svh bg-cover flex flex-col place-items-center justify-center bg-[url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1108099%2Fpexels-photo-1108099.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-chevanon-photography-1108099.jpg%26fm%3Djpg&f=1&nofb=1&ipt=d91d12428efea60bfc798a635a1e79ce957bc6f11f26fdb257a80932e6e7202d)]"
+          class="min-h-[80dvh] bg-cover flex flex-col place-items-center justify-center bg-[url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1108099%2Fpexels-photo-1108099.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-chevanon-photography-1108099.jpg%26fm%3Djpg&f=1&nofb=1&ipt=d91d12428efea60bfc798a635a1e79ce957bc6f11f26fdb257a80932e6e7202d)]"
         >
-          <div class="text-center">
-            <h2 class="text-3xl">אני ליבי</h2>
-            <h3 class="text-3xl">ליבי מאלפת מעלפת</h3>
-            <a class="text-3xl bg-amber-500">דברו איתי</a>
+          <div class="text-center text-white flex flex-col gap-4">
+            <h2 class="text-4xl">אני ליבי</h2>
+            <h3 class="text-6xl">ליבי מאלפת מעלפת</h3>
+            <a
+              href="#contact"
+              class="text-4xl cursor-pointer w-fit self-center px-6 py-2 bg-amber-500"
+              >דברו איתי</a
+            >
           </div>
         </section>
 
         <section>
-          <div>טקסט מעניין</div>
+          <div class="">טקסט מעניין</div>
         </section>
 
-        <section><div>טופס צור קשר</div></section>
+        <section id="contact">
+          <div class="text-center pb-2">שלחו לי יונת דואר</div>
+          <form action="" class="flex place-content-center">
+            <div class="max-w-fit flex flex-col gap-4">
+              <input
+                type="text"
+                placeholder="שם"
+                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-50 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+              />
+              <input
+                type="text"
+                placeholder="טלפון"
+                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-50 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+              />
+              <textarea
+                placeholder="הודעה"
+                name=""
+                id=""
+                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-50 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+              ></textarea>
+              <button
+                class="bg-amber-500 px-6 py-2 cursor-pointer text-white rounded-xl"
+              >
+                KACHOW
+              </button>
+            </div>
+          </form>
+        </section>
       </main>
 
       <footer>
