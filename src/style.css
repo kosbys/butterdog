@@ -3,13 +3,18 @@
 
 @theme {
   --font-rubik: "Rubik", sans-serif;
+  --color-bordeaux: #61111e;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #5b21b6 !important;
 }
 
 #hamburger {
   position: absolute;
   width: 60px;
   height: 60px;
-  top: 2%;
   right: 5%;
   transition-duration: 0.5s;
 }

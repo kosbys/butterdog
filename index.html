@@ -8,10 +8,12 @@
   </head>
   <body>
     <div id="app" class="min-h-max font-rubik">
-      <header class="bg-neutral-200 py-8">
-        <nav class="flex flex-row gap-12 justify-center items-center">
+      <header class="bg-neutral-100 py-3 mb-1 sticky top-0">
+        <nav
+          class="flex flex-row bg-neutral-100 gap-12 justify-center items-center"
+        >
           <div>
-            <div id="hamburger" class="block md:hidden">
+            <div id="hamburger" class="block top-0 md:hidden">
               <div class="icon"></div>
             </div>
             <img
@@ -23,35 +25,20 @@
 
           <ul
             id="menu"
-            class="hidden bg-neutral-200 p-4 flex-col absolute top-16 left-0 w-full md:w-fit md:static md:flex md:flex-row md:gap-12 md:shadow-none md:p-0"
+            class="hidden p-4 flex-col bg-neutral-100 absolute top-16 left-0 w-full md:w-fit md:static md:flex md:flex-row md:gap-12 md:shadow-none md:p-0"
           >
             <li
-              class="hover:scale-125 transition duration-300 ease-in-out text-xl font-bold"
+              class="hover:scale-125 text-bordeaux transition duration-300 ease-in-out text-xl font-bold"
             >
               <a href="">לורם איפסום</a>
             </li>
             <li
-              class="hover:scale-125 transition duration-300 ease-in-out text-xl font-bold"
-            >
-              <a href="">לורם</a>
-            </li>
-            <li
-              class="hover:scale-125 transition duration-300 ease-in-out text-xl font-bold"
-            >
-              <a href="">איפסום</a>
-            </li>
-            <li
-              class="hover:scale-125 transition duration-300 ease-in-out text-xl font-bold"
+              class="hover:scale-125 text-bordeaux transition duration-300 ease-in-out text-xl font-bold"
             >
               <a href="">לורם איפסום</a>
             </li>
             <li
-              class="hover:scale-125 transition duration-300 ease-in-out text-xl font-bold"
-            >
-              <a href="">לורם איפסום</a>
-            </li>
-            <li
-              class="hover:scale-125 transition duration-300 ease-in-out text-xl font-bold"
+              class="hover:scale-125 text-bordeaux transition duration-300 ease-in-out text-xl font-bold"
             >
               <a href="">לורם איפסום</a>
             </li>
@@ -62,25 +49,17 @@
               href=""
               class="hover:scale-125 transition duration-300 ease-in-out"
             >
-              <?xml version="1.0" encoding="UTF-8"?>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                version="1.1"
-                id="Capa_1"
-                x="0px"
-                y="0px"
                 viewBox="0 0 24 24"
-                style="enable-background: new 0 0 24 24"
-                xml:space="preserve"
-                width="32"
-                height="32"
+                class="w-8 h-8 fill-bordeaux hover:fill-violet-800 transition-colors duration-300"
               >
-                <g>
-                  <path
-                    d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86c0-0.947,0.464-1.869,1.95-1.869h1.509   V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073   c0-6.627,5.373-12,12-12S24,5.445,24,12.073z"
-                  />
-                </g>
+                <path
+                  d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86
+       c0-0.947,0.464-1.869,1.95-1.869h1.509V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,
+       1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073
+       c0-6.627,5.373-12,12-12S24,5.445,24,12.073z"
+                />
               </svg>
             </a>
             <a
@@ -90,16 +69,8 @@
               <?xml version="1.0" encoding="UTF-8"?>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                version="1.1"
-                id="Capa_1"
-                x="0px"
-                y="0px"
                 viewBox="0 0 24 24"
-                style="enable-background: new 0 0 24 24"
-                xml:space="preserve"
-                width="32"
-                height="32"
+                class="w-8 h-8 fill-bordeaux hover:fill-violet-800 transition-colors duration-300"
               >
                 <g>
                   <path
@@ -119,16 +90,8 @@
               <?xml version="1.0" encoding="UTF-8"?>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                version="1.1"
-                id="Capa_1"
-                x="0px"
-                y="0px"
                 viewBox="0 0 24 24"
-                style="enable-background: new 0 0 24 24"
-                xml:space="preserve"
-                width="32"
-                height="32"
+                class="w-8 h-8 fill-bordeaux hover:fill-violet-800 transition-colors duration-300"
               >
                 <path
                   d="M22.465,9.866c-2.139,0-4.122-0.684-5.74-1.846v8.385c0,4.188-3.407,7.594-7.594,7.594c-1.618,0-3.119-0.51-4.352-1.376  c-1.958-1.375-3.242-3.649-3.242-6.218c0-4.188,3.407-7.595,7.595-7.595c0.348,0,0.688,0.029,1.023,0.074v0.977v3.235  c-0.324-0.101-0.666-0.16-1.023-0.16c-1.912,0-3.468,1.556-3.468,3.469c0,1.332,0.756,2.489,1.86,3.07  c0.481,0.253,1.028,0.398,1.609,0.398c1.868,0,3.392-1.486,3.462-3.338L12.598,0h4.126c0,0.358,0.035,0.707,0.097,1.047  c0.291,1.572,1.224,2.921,2.517,3.764c0.9,0.587,1.974,0.93,3.126,0.93V9.866z"
@@ -142,25 +105,70 @@
       <main>
         <section
           id="hero"
-          class="min-h-[80dvh] bg-cover flex flex-col place-items-center justify-center bg-[url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1108099%2Fpexels-photo-1108099.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-chevanon-photography-1108099.jpg%26fm%3Djpg&f=1&nofb=1&ipt=d91d12428efea60bfc798a635a1e79ce957bc6f11f26fdb257a80932e6e7202d)]"
+          class="min-h-[80dvh] bg-cover flex flex-col items-center justify-center bg-[url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1108099%2Fpexels-photo-1108099.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-chevanon-photography-1108099.jpg%26fm%3Djpg&f=1&nofb=1&ipt=d91d12428efea60bfc798a635a1e79ce957bc6f11f26fdb257a80932e6e7202d)]"
         >
-          <div class="text-center text-white flex flex-col gap-4">
-            <h2 class="text-4xl">אני ליבי</h2>
-            <h3 class="text-6xl">ליבי מאלפת מעלפת</h3>
-            <a
-              href="#contact"
-              class="text-4xl cursor-pointer w-fit self-center px-6 py-2 bg-amber-500"
-              >דברו איתי</a
-            >
+          <div class="flex flex-col items-center">
+            <div class="text-white flex flex-col gap-4">
+              <h2 class="text-7xl text-shadow-lg">אילוף כלבים</h2>
+              <h3 class="text-4xl text-violet-800">ליבי מאלפת מעלפת</h3>
+              <p class="text-xl">רוצים שהכלב שלכם יתעלף?</p>
+              <a
+                href="#contact"
+                class="text-2xl hover:bg-bordeaux transition-colors duration-300 rounded-sm cursor-pointer w-fit self-start px-6 py-2 bg-violet-800"
+                >דברו איתי</a
+              >
+            </div>
           </div>
         </section>
 
         <section>
-          <div class="">טקסט מעניין</div>
+          <div class="flex items-center bg-neutral-100 justify-center my-4">
+            <div class="flex flex-col items-start text-right gap-4 p-8">
+              <h1 class="text-4xl text-bordeaux">המאלפת המעלפת</h1>
+              <p class="w-70 text-base text-bordeaux">
+                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית הועניב
+                היושבב שערש שמחויט - שלושע ותלברו חשלו שעותלשך וחאית נובש ערששף.
+                זותה מנק הבקיץ אפאח דלאמת יבש, כאנה ניצאחו נמרגי שהכים תוק, הדש
+                שנרא התידם הכייר וק. תצטריק לרטי.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="flex justify-center items-center">
+          <div class="swiper w-[50vw] h-[70vh]">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="https://wallpapercave.com/wp/AYWg3iu.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://files.catbox.moe/v58juk.webp"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="https://i.pinimg.com/originals/43/02/fd/4302fd3b71453f33b38a99b4d0fc4d28.jpg"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev fill-violet-800"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </section>
 
         <section id="contact">
-          <div class="text-center pb-2">שלחו לי יונת דואר</div>
+          <div class="text-center pb-2">צרו קשר</div>
           <form action="" class="flex place-content-center">
             <div class="max-w-fit flex flex-col gap-4">
               <input
@@ -180,7 +188,7 @@
                 class="w-full px-8 py-4 rounded-lg font-medium bg-gray-50 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
               ></textarea>
               <button
-                class="bg-amber-500 px-6 py-2 cursor-pointer text-white rounded-xl"
+                class="bg-violet-800 hover:bg-bordeaux transition-colors duration-300 px-6 py-2 cursor-pointer text-white rounded-xl"
               >
                 KACHOW
               </button>
@@ -194,5 +202,6 @@
       </footer>
     </div>
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/slider.js"></script>
   </body>
 </html>
