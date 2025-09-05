@@ -11,6 +11,10 @@
   color: #5b21b6 !important;
 }
 
+.swiper-pagination-bullet-active {
+  background: #5b21b6 !important;
+}
+
 #hamburger {
   position: absolute;
   width: 60px;

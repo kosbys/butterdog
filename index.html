@@ -2,13 +2,16 @@
 <html lang="he" dir="rtl" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Butterdog</title>
   </head>
   <body>
     <div id="app" class="min-h-max font-rubik">
-      <header class="bg-neutral-100 py-3 mb-1 sticky top-0">
+      <header class="bg-neutral-100 py-3 mb-1 z-10 sticky top-0">
         <nav
           class="flex flex-row bg-neutral-100 gap-12 justify-center items-center"
         >
@@ -16,11 +19,7 @@
             <div id="hamburger" class="block top-0 md:hidden">
               <div class="icon"></div>
             </div>
-            <img
-              src="https://media.tenor.com/X_p1Oq3n4FMAAAAM/butter-dog-dog.gif"
-              alt=""
-              class="w-8 rounded-4xl"
-            />
+            <img id="logo" src="/logo.png" alt="" class="w-32 rounded-4xl" />
           </div>
 
           <ul
@@ -136,7 +135,10 @@
         </section>
 
         <section class="flex justify-center items-center">
-          <div class="swiper w-[50vw] h-[70vh]">
+          <div
+            class="swiper w-[90vw] h-[60vh] md:w-[50vw] md:h-[70vh]"
+            dir="ltr"
+          >
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img
@@ -147,7 +149,7 @@
               </div>
               <div class="swiper-slide">
                 <img
-                  src="https://files.catbox.moe/v58juk.webp"
+                  src="https://pbs.twimg.com/media/FIcddqQVUAEwovO.jpg"
                   alt=""
                   class="w-full h-full object-cover"
                 />
@@ -174,18 +176,18 @@
               <input
                 type="text"
                 placeholder="שם"
-                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-50 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                class="w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
               />
               <input
                 type="text"
                 placeholder="טלפון"
-                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-50 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                class="w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
               />
               <textarea
                 placeholder="הודעה"
                 name=""
                 id=""
-                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-50 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                class="w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
               ></textarea>
               <button
                 class="bg-violet-800 hover:bg-bordeaux transition-colors duration-300 px-6 py-2 cursor-pointer text-white rounded-xl"
@@ -197,11 +199,59 @@
         </section>
       </main>
 
-      <footer>
-        <div>פרטים</div>
+      <footer class="mt-16">
+        <div class="min-w-dvw flex flex-row justify-center mx-auto px-4">
+          <div>פרטים</div>
+          <div
+            id="dock"
+            class="flex flex-row justify-around z-10 bottom-0 bg-violet-800 min-w-dvw h-14 fixed md:hidden"
+          >
+            <div
+              class="absolute -top-8 left-1/2 -translate-x-1/2 w-full flex justify-around"
+            >
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-14 h-14 bg-violet-800 shadow-xl rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 640"
+                    class="w-7 h-7"
+                  >
+                    <path
+                      fill="#ffffff"
+                      d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z"
+                    />
+                  </svg>
+                </div>
+
+                <span class="text-white text-sm mt-2">DAWG</span>
+              </div>
+              <div class="w-16 h-16 bg-violet-800 shadow-xl rounded-full"></div>
+              <div class="w-16 h-16 bg-violet-800 shadow-xl rounded-full"></div>
+            </div>
+          </div>
+        </div>
       </footer>
+      <div
+        id="modal"
+        class="hidden fixed inset-0 bg-transparent bg-opacity-70 items-center justify-center z-50"
+      >
+        <div class="bg-white rounded-2xl shadow-xl max-w-3xl w-full relative">
+          <button
+            id="closeModal"
+            class="absolute top-2 right-2 text-gray-600 hover:text-violet-800 text-xl font-bold"
+          >
+            ✕
+          </button>
+          <div
+            id="videoContainer"
+            class="aspect-video w-full rounded-2xl overflow-hidden"
+          ></div>
+        </div>
+      </div>
     </div>
     <script type="module" src="/src/main.js"></script>
-    <script type="module" src="/src/slider.js"></script>
+    <script type="module" src="/src/swiper.js"></script>
   </body>
 </html>

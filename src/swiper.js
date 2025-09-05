@@ -1,13 +1,17 @@
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
 
 const swiper = new Swiper(".swiper", {
-  modules: [Navigation, Pagination],
+  modules: [Navigation, Pagination, Autoplay],
   direction: "horizontal",
   loop: true,
+  autoplay: {
+    pauseOnMouseEnter: true,
+    delay: 5000,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
