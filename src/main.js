@@ -39,6 +39,24 @@ closeModal.addEventListener("click", () => {
   videoContainer.innerHTML = "";
 });
 
+const slides = document.getElementsByClassName("slide-image");
+
+let buffer = "";
+
+document.addEventListener("keydown", (e) => {
+  buffer += e.key.toLowerCase();
+
+  if (buffer.length > 3) {
+    buffer = "";
+  }
+
+  if (buffer === "cat") {
+    [...slides].forEach((slide) => {
+      slide.src = "https://files.catbox.moe/4qdmme.jpg";
+    });
+  }
+});
+
 console.log(
   "                     , \r\n                ,.  | \\ \r\n               |: \\ ; :\\ \r\n               :' ;\\| ::\\ \r\n                \\ : | `::\\ \r\n                _)  |   `:`. \r\n              ,' , `.    ;: ; \r\n            ,' ;:  ;\"'  ,:: |_ \r\n           /,   ` .    ;::: |:`-.__ \r\n        _,' _o\\  ,::.`:' ;  ;   . ' \r\n    _,-'           `:.          ;\"\"\\, \r\n ,-'                     ,:         `-;, \r\n \\,                       ;:           ;--._ \r\n  `.______,-,----._     ,' ;:        ,/ ,  ,` \r\n         / /,-';'  \\     ; `:      ,'/,::.::: \r\n       ,',;-'-'_,--;    ;   :.   ,',',;:::::: \r\n      ( /___,-'     `.     ;::,,'o/  ,::::::: \r\n       `'             )    ;:,'o /  ;\"-   -:: \r\n                      \\__ _,'o ,'         ,:: \r\n                         ) `--'       ,..:::: \r\n      -libi-              ; `.        ,::::::: \r\n                          ;  ``::.    ::::::: "
 );
