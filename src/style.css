@@ -3,16 +3,23 @@
 
 @theme {
   --font-rubik: "Rubik", sans-serif;
-  --color-bordeaux: #61111e;
+  --color-primary: #896ac4;
+  --color-primary-bold: #52388c;
+  --color-primary-light: #ac8be8;
+  --color-secondary: #8c3a40;
+  --color-secondary-light: #ba6266;
+  --color-secondary-bold: #60111e;
+  --color-background: #ffffff;
+  --color-background-secondary: #fbffff;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #5b21b6 !important;
+  color: #52388c !important;
 }
 
 .swiper-pagination-bullet-active {
-  background: #5b21b6 !important;
+  background: #52388c !important;
 }
 
 #hamburger {
