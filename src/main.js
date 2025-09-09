@@ -54,6 +54,12 @@ document.addEventListener("keydown", (e) => {
     [...slides].forEach((slide) => {
       slide.src = "https://files.catbox.moe/4qdmme.jpg";
     });
+
+    document
+      .querySelector("#hero")
+      .classList.add(
+        `bg-[url(https://media1.tenor.com/m/1a6RFI10-oYAAAAd/butter-dog.gif)]`
+      );
   }
 });
 
