@@ -45,7 +45,7 @@ logo.addEventListener("click", () => {
 
 contactButton.addEventListener("click", () => {
   modalBody.innerHTML = `
-      <div class="p-12 bg-gray-100 shadow-xl">
+      <div class="p-6 bg-gray-100 shadow-xl">
       <div class="text-center">כותרת</div>
         <form action="" class="flex flex-col justify-center">
           <div class="flex flex-col p-6 gap-4 ">
