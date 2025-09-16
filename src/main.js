@@ -27,11 +27,14 @@ logo.addEventListener("click", () => {
   clickCount++;
   if (clickCount === triggerClicks) {
     modalBody.innerHTML = `
-      <iframe class="w-100 h-100" 
-        src="${videoUrl}" 
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe>
+        <video class="w-100 h-100" 
+          src="/butterdog/butterdog.webm" 
+          title="Butterdog"
+          autoplay
+          controls
+          loop
+          >
+        </video>
     `;
 
     modal.showModal();
@@ -106,9 +109,7 @@ document.addEventListener("keydown", (e) => {
 
     document
       .querySelector("#hero")
-      .classList.add(
-        `bg-[url(https://media1.tenor.com/m/1a6RFI10-oYAAAAd/butter-dog.gif)]`
-      );
+      .classList.add(`bg-[url("/butterdog.webp")]`);
   }
 });
 
