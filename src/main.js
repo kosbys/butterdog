@@ -11,7 +11,8 @@ const triggerClicks = 5;
 const logo = document.getElementById("logo");
 const modal = document.getElementById("modal");
 const closeModal = document.getElementById("closeModal");
-const videoContainer = document.getElementById("videoContainer");
+const modalBody = document.getElementById("modalBody");
+const contactButton = document.getElementById("contactButton");
 
 const videoUrl =
   "https://www.youtube.com/embed/8V5T6oUOEV4?si=Kekk_XrxlYG72Yo6?autoplay=1";
@@ -19,24 +20,54 @@ const videoUrl =
 logo.addEventListener("click", () => {
   clickCount++;
   if (clickCount === triggerClicks) {
-    videoContainer.innerHTML = `
-      <iframe class="w-full h-full" 
+    modalBody.innerHTML = `
+      <iframe class="w-70 h-64" 
         src="${videoUrl}" 
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen></iframe>
     `;
 
-    modal.classList.remove("hidden");
-    modal.classList.add("flex");
+    modal.showModal();
     clickCount = 0;
   }
 });
 
+contactButton.addEventListener("click", () => {
+  modalBody.innerHTML = `
+      <form action="" class="">
+      <div class="max-w-fit flex flex-col gap-4">
+        <input
+          type="text"
+          placeholder="שם"
+          class="w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+        />
+        <input
+          type="text"
+          placeholder="טלפון"
+          class="w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+        />
+        <textarea
+          placeholder="הודעה"
+          name=""
+          id=""
+          class="resize-none w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+        ></textarea>
+        <button
+          class="bg-primary hover:bg-primary-bold transition-colors duration-300 px-6 py-2 cursor-pointer text-white rounded-xl"
+        >
+          KACHOW
+        </button>
+      </div>
+    </form>
+  `;
+
+  modal.showModal();
+});
+
 closeModal.addEventListener("click", () => {
-  modal.classList.add("hidden");
-  modal.classList.remove("flex");
-  videoContainer.innerHTML = "";
+  modal.close();
+  modalBody.innerHTML = "";
 });
 
 const slides = document.getElementsByClassName("slide-image");

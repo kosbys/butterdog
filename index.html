@@ -36,14 +36,9 @@
             >
               <a href="">שירותים</a>
             </li>
-            <li
-              class="hover:scale-125 text-secondary transition duration-300 ease-in-out text-xl font-bold"
-            >
-              <a href="#contact">צור קשר</a>
-            </li>
           </ul>
 
-          <div class="flex flex-row gap-4">
+          <div id="socials" class="flex flex-row gap-4 invisible md:visible">
             <a
               href=""
               class="hover:scale-125 transition duration-300 ease-in-out"
@@ -144,6 +139,14 @@
               </svg>
             </a>
           </div>
+          <div>
+            <button
+              class="bg-primary hover:bg-primary-bold transition-colors duration-300 px-6 py-2 cursor-pointer text-white rounded-xl"
+              id="contactButton"
+            >
+              צור קשר
+            </button>
+          </div>
         </nav>
       </header>
 
@@ -217,41 +220,11 @@
           </div>
         </section>
 
-        <section id="contact">
-          <div class="text-center pb-2">צרו קשר</div>
-          <form action="" class="flex place-content-center">
-            <div class="max-w-fit flex flex-col gap-4">
-              <input
-                type="text"
-                placeholder="שם"
-                class="w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-              />
-              <input
-                type="text"
-                placeholder="טלפון"
-                class="w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-              />
-              <textarea
-                placeholder="הודעה"
-                name=""
-                id=""
-                class="resize-none w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-              ></textarea>
-              <button
-                class="bg-primary hover:bg-primary-bold transition-colors duration-300 px-6 py-2 cursor-pointer text-white rounded-xl"
-              >
-                KACHOW
-              </button>
-            </div>
-          </form>
-        </section>
+        <section id="services "></section>
       </main>
 
       <footer class="mt-16">
         <div class="min-w-dvw flex flex-row justify-center mx-auto px-4">
-          <div>פרטים</div>
-
-          <!-- need footer -->
           <div
             id="dock"
             class="flex flex-row justify-around z-10 bottom-0 bg-primary min-w-dvw h-14 fixed md:hidden"
@@ -336,24 +309,22 @@
         </div>
       </footer>
 
-      <div
+      <dialog
         id="modal"
-        class="hidden fixed inset-0 bg-transparent bg-opacity-70 items-center justify-center z-50"
+        class="flex place-self-center bg-transparent bg-opacity-70 z-50"
       >
-        <div class="bg-white rounded-2xl shadow-xl max-w-3xl w-full relative">
+        <div id="modalContent" class="bg-white rounded-2xl shadow-xl">
+          <div id="modalBody" class="rounded-2xl"></div>
           <button
             id="closeModal"
-            class="absolute top-2 right-2 text-gray-600 hover:text-primary-bold text-xl font-bold"
+            class="absolute top-2 right-2 text-gray-300 hover:text-primary-bold text-xl font-bold cursor-pointer"
           >
             ✕
           </button>
-          <div
-            id="videoContainer"
-            class="aspect-video w-full rounded-2xl overflow-hidden"
-          ></div>
         </div>
-      </div>
+      </dialog>
     </div>
+
     <script type="module" src="/src/main.js"></script>
     <script type="module" src="/src/swiper.js"></script>
   </body>
