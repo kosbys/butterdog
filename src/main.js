@@ -21,7 +21,7 @@ logo.addEventListener("click", () => {
   clickCount++;
   if (clickCount === triggerClicks) {
     modalBody.innerHTML = `
-      <iframe class="w-70 h-64" 
+      <iframe class="w-100 h-100" 
         src="${videoUrl}" 
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
