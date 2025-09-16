@@ -13,6 +13,10 @@
   --color-background-secondary: #fbffff;
 }
 
+.swiper {
+  margin: 0 !important;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   color: #52388c !important;
