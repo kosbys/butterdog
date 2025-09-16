@@ -1,5 +1,11 @@
 import "./style.css";
 
+function closeModal() {
+  modal.close();
+  modalCloseButton.classList.add("hidden");
+  modalBody.innerHTML = "";
+}
+
 document.querySelector("#hamburger").addEventListener("click", () => {
   document.querySelector("#hamburger").classList.toggle("open");
   document.querySelector("#menu").classList.toggle("hidden");
@@ -10,7 +16,7 @@ const triggerClicks = 5;
 
 const logo = document.getElementById("logo");
 const modal = document.getElementById("modal");
-const closeModal = document.getElementById("closeModal");
+const modalCloseButton = document.getElementById("closeModal");
 const modalBody = document.getElementById("modalBody");
 const contactButton = document.getElementById("contactButton");
 
@@ -29,56 +35,64 @@ logo.addEventListener("click", () => {
     `;
 
     modal.showModal();
-    closeModal.classList.remove("hidden");
+    modalCloseButton.classList.remove("hidden");
     clickCount = 0;
   }
 });
 
 contactButton.addEventListener("click", () => {
   modalBody.innerHTML = `
-      <form action="" class="p-12">
-      <div class="max-w-fit flex flex-col gap-4">
-        <input
-          type="text"
-          placeholder="שם"
-          class="w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-        />
-        <input
-          type="text"
-          placeholder="טלפון"
-          class="w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-        />
-        <textarea
-          placeholder="הודעה"
-          name=""
-          id=""
-          class="resize-none w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-        ></textarea>
-        <button
-          class="bg-primary hover:bg-primary-bold transition-colors duration-300 px-6 py-2 cursor-pointer text-white rounded-xl"
-        >
-          KACHOW
-        </button>
+      <div class="p-12 bg-gray-100 shadow-xl">
+      <div class="text-center">כותרת</div>
+        <form action="" class="flex flex-col justify-center">
+          <div class="flex flex-col p-6 gap-4 ">
+            <input
+              type="text"
+              required
+              placeholder="שם *"
+              class="w-full px-2 bg-white py-2 outline-1 outline-primary-bold"
+            />
+            <input
+              type="text"
+              required
+              placeholder="טלפון *"
+              class="w-full px-2 bg-white py-2 outline-1 outline-primary-bold"
+            />
+            <textarea
+              required
+              placeholder="הודעה *"
+              name=""
+              id=""
+              class="resize-y w-full px-2 bg-white py-2 outline-1 outline-primary-bold"
+            ></textarea>
+            <button
+              class="rounded-sm transition ease-in-out bg-primary px-4 py-2 hover:bg-primary-bold text-white duration-300 cursor-pointer"
+            >
+              שלח
+            </button>
+          </div>
+        </form>
+        <div class="text-center">
+          <div>דברו איתי 050-0000000</div>
+        </div>
       </div>
-      <div>hi</div>
-    </form>
   `;
 
   modal.showModal();
-  closeModal.classList.remove("hidden");
+  modalCloseButton.classList.remove("hidden");
 });
 
-closeModal.addEventListener("click", () => {
-  modal.close();
-  closeModal.classList.add("hidden");
-  modalBody.innerHTML = "";
-});
+modalCloseButton.addEventListener("click", closeModal);
 
 const slides = document.getElementsByClassName("slide-image");
 
 let buffer = "";
 
 document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+
   buffer += e.key.toLowerCase();
 
   if (buffer.length > 3) {

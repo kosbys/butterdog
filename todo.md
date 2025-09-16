@@ -1,5 +1,9 @@
-modal form
-move socials
+~~modal form~~
+~~move socials~~
 services section
-add button in top
+~~add button in top~~
 play with colors purple
+
+STYLE MODAL FORM
+MAKE SERVICE SECTION
+PLAY WITH COLORS
