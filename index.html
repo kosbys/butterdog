@@ -8,13 +8,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/butterdog/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Butterdog</title>
-    <script type="module" crossorigin src="/butterdog/assets/index-D7CwkuC3.js"></script>
-    <link rel="stylesheet" crossorigin href="/butterdog/assets/index-DcTPIFVR.css">
+    <script type="module" crossorigin src="/butterdog/assets/index-HhT8X12N.js"></script>
+    <link rel="stylesheet" crossorigin href="/butterdog/assets/index-BZzDfB6f.css">
   </head>
   <body>
     <div id="app" class="min-h-max font-rubik">
       <header
-        class="py-3 drop-shadow-sm mb-1 z-10 bg-background-secondary sticky top-0"
+        class="drop-shadow-sm mb-1 z-10 bg-background-secondary sticky top-0"
       >
         <nav class="flex flex-row gap-12 justify-center items-center">
           <div>
@@ -26,26 +26,21 @@
 
           <ul
             id="menu"
-            class="hidden bg-background-secondary p-4 flex-col border-b-2 border-primary md:border-0 absolute top-38 left-0 w-full md:w-fit md:static md:flex md:flex-row md:gap-12 md:shadow-none md:p-0"
+            class="hidden bg-background-secondary p-4 flex-col border-b-2 border-primary md:border-0 absolute top-33 left-0 w-full md:w-fit md:static md:flex md:flex-row md:gap-12 md:shadow-none md:p-0"
           >
             <li
               class="hover:scale-125 text-secondary transition duration-300 ease-in-out text-xl font-bold"
             >
-              <a href="">אודות</a>
+              <a href="#about">אודות</a>
             </li>
             <li
               class="hover:scale-125 text-secondary transition duration-300 ease-in-out text-xl font-bold"
             >
-              <a href="">שירותים</a>
-            </li>
-            <li
-              class="hover:scale-125 text-secondary transition duration-300 ease-in-out text-xl font-bold"
-            >
-              <a href="#contact">צור קשר</a>
+              <a href="#services">שירותים</a>
             </li>
           </ul>
 
-          <div class="flex flex-row gap-4">
+          <div id="socials" class="flex-row gap-4 hidden md:flex">
             <a
               href=""
               class="hover:scale-125 transition duration-300 ease-in-out"
@@ -84,7 +79,8 @@
               href=""
               class="hover:scale-125 transition duration-300 ease-in-out"
             >
-              <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <?xml version="1.0" encoding="utf-8"?>
+              <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
               <svg
                 class="w-8 h-8 fill-secondary hover:fill-secondary-bold transition-colors duration-300"
                 viewBox="0 0 24 24"
@@ -128,7 +124,8 @@
               href=""
               class="hover:scale-125 transition duration-300 ease-in-out"
             >
-              <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <?xml version="1.0" encoding="utf-8"?>
+              <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
               <svg
                 class="w-8 h-8 fill-secondary hover:fill-secondary-bold transition-colors duration-300"
                 viewBox="0 0 24 24"
@@ -146,6 +143,14 @@
               </svg>
             </a>
           </div>
+          <div>
+            <button
+              class="hover:scale-110 transition ease-in-out duration-300 rounded-sm cursor-pointer bg-secondary hover:bg-secondary-bold text-white px-6 py-3 text-lg <!-- bigger default (mobile) --> sm:px-4 sm:py-2 sm:text-base <!-- smaller on bigger screens -->"
+              id="contactButton"
+            >
+              צור קשר
+            </button>
+          </div>
         </nav>
       </header>
 
@@ -154,21 +159,21 @@
           id="hero"
           class="min-h-[80dvh] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1108099%2Fpexels-photo-1108099.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-chevanon-photography-1108099.jpg%26fm%3Djpg&f=1&nofb=1&ipt=d91d12428efea60bfc798a635a1e79ce957bc6f11f26fdb257a80932e6e7202d)]"
         >
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col self-start mr-[20%]">
             <div class="text-white flex flex-col gap-4">
               <h2 class="text-7xl text-shadow-lg">אילוף כלבים</h2>
-              <h3 class="text-4xl text-primary">ליבי מאלפת מעלפת</h3>
-              <p class="text-xl">רוצים שהכלב שלכם יתעלף?</p>
+              <h3 class="text-4xl text-primary-light">ליבי מאלפת מעלפת</h3>
+              <p class="text-xl">אכפת לי מהכלב שלך</p>
               <a
                 href="#contact"
-                class="text-4xl bg-primary hover:bg-primary-bold transition-colors duration-300 rounded-sm cursor-pointer w-fit self-start px-6 py-2"
+                class="self-end text-4xl bg-primary hover:bg-primary-bold transition-colors duration-300 rounded-sm cursor-pointer w-fit px-6 py-2"
                 >דברו איתי</a
               >
             </div>
           </div>
         </section>
 
-        <section>
+        <section id="about">
           <div
             class="flex items-center bg-neutral-100 border-t-4 border-primary justify-center my-4"
           >
@@ -184,11 +189,11 @@
           </div>
         </section>
 
-        <section class="flex justify-center items-center">
-          <div
-            class="swiper w-[90vw] h-[60vh] md:w-[50vw] md:h-[70vh]"
-            dir="ltr"
-          >
+        <section
+          id="gallery"
+          class="flex justify-center items-center max-w-6xl mx-auto py-12"
+        >
+          <div class="swiper w-full h-[60vh]" dir="ltr">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img
@@ -214,46 +219,79 @@
             </div>
 
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev fill-fuchsia-800"></div>
-            <div class="swiper-button-next"></div>
+            <!-- <div class="swiper-button-prev fill-fuchsia-800"></div>
+            <div class="swiper-button-next"></div> -->
           </div>
         </section>
 
-        <section id="contact">
-          <div class="text-center pb-2">צרו קשר</div>
-          <form action="" class="flex place-content-center">
-            <div class="max-w-fit flex flex-col gap-4">
-              <input
-                type="text"
-                placeholder="שם"
-                class="w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-              />
-              <input
-                type="text"
-                placeholder="טלפון"
-                class="w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-              />
-              <textarea
-                placeholder="הודעה"
-                name=""
-                id=""
-                class="resize-none w-full px-4 py-4 rounded-lg font-medium bg-gray-50 border placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-              ></textarea>
-              <button
-                class="bg-primary hover:bg-primary-bold transition-colors duration-300 px-6 py-2 cursor-pointer text-white rounded-xl"
-              >
-                KACHOW
-              </button>
+        <section id="services" class="max-w-6xl mx-auto py-12">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="service flex flex-col bg-white line-">
+              <div class="pb-2">
+                <img src="/butterdog/nodog.svg" class="w-24" alt="" />
+              </div>
+              <h6 class="text-2xl pb-2">שירות כלבבי</h6>
+              <p class="leading-relaxed text-justify">
+                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר
+                סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ, ושבעגט ליבם סולגק.
+              </p>
             </div>
-          </form>
+            <div class="service flex flex-col bg-white line-">
+              <div class="pb-2">
+                <img src="/butterdog/nodog.svg" class="w-24" alt="" />
+              </div>
+              <h6 class="text-2xl pb-2">שירות כלבבי</h6>
+              <p class="leading-relaxed text-justify">
+                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר
+                סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ, ושבעגט ליבם סולגק.
+              </p>
+            </div>
+            <div class="service flex flex-col bg-white line-">
+              <div class="pb-2">
+                <img src="/butterdog/nodog.svg" class="w-24" alt="" />
+              </div>
+              <h6 class="text-2xl pb-2">שירות כלבבי</h6>
+              <p class="leading-relaxed text-justify">
+                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר
+                סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ, ושבעגט ליבם סולגק.
+              </p>
+            </div>
+            <div class="service flex flex-col bg-white line-">
+              <div class="pb-2">
+                <img src="/butterdog/nodog.svg" class="w-24" alt="" />
+              </div>
+              <h6 class="text-2xl pb-2">שירות כלבבי</h6>
+              <p class="leading-relaxed text-justify">
+                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר
+                סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ, ושבעגט ליבם סולגק.
+              </p>
+            </div>
+            <div class="service flex flex-col bg-white line-">
+              <div class="pb-2">
+                <img src="/butterdog/nodog.svg" class="w-24" alt="" />
+              </div>
+              <h6 class="text-2xl pb-2">שירות כלבבי</h6>
+              <p class="leading-relaxed text-justify">
+                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר
+                סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ, ושבעגט ליבם סולגק.
+              </p>
+            </div>
+            <div class="service flex flex-col bg-white line-">
+              <div class="pb-2">
+                <img src="/butterdog/nodog.svg" class="w-24" alt="" />
+              </div>
+              <h6 class="text-2xl pb-2">שירות כלבבי</h6>
+              <p class="leading-relaxed text-justify">
+                לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר
+                סוברט לורם שבצק יהול, לכנוץ בעריר גק ליץ, ושבעגט ליבם סולגק.
+              </p>
+            </div>
+          </div>
         </section>
       </main>
 
-      <footer class="mt-16">
+      <footer class="mt-16 md:hidden">
         <div class="min-w-dvw flex flex-row justify-center mx-auto px-4">
-          <div>פרטים</div>
-
-          <!-- need footer -->
           <div
             id="dock"
             class="flex flex-row justify-around z-10 bottom-0 bg-primary min-w-dvw h-14 fixed md:hidden"
@@ -262,56 +300,125 @@
               class="absolute -top-8 left-1/2 -translate-x-1/2 w-full flex justify-around"
             >
               <div class="flex flex-col items-center">
-                <div
-                  class="w-14 h-14 bg-primary drop-shadow-sm hover:bg-primary-bold transition duration-500 ease-in-out rounded-full flex items-center justify-center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 640 640"
-                    class="w-7 h-7"
+                <a href="https://www.instagram.com/" target="_blank">
+                  <div
+                    class="w-14 h-14 bg-primary drop-shadow-sm hover:bg-primary-bold transition duration-500 ease-in-out rounded-full flex items-center justify-center"
                   >
-                    <path
-                      fill="#ffffff"
-                      d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z"
-                    />
-                  </svg>
-                </div>
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg
+                      class="w-8 h-8 fill-white transition-colors duration-300"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>Instagram</title>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                      />
+                      <path
+                        d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                      />
+                    </svg></div
+                ></a>
 
                 <span class="text-white text-sm mt-2">DAWG</span>
               </div>
               <div class="flex flex-col items-center">
-                <div
-                  class="w-14 h-14 bg-primary drop-shadow-sm hover:bg-primary-bold transition duration-500 ease-in-out rounded-full flex items-center justify-center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 640 640"
-                    class="w-7 h-7"
+                <a href="https://www.instagram.com/" target="_blank">
+                  <div
+                    class="w-14 h-14 bg-primary drop-shadow-sm hover:bg-primary-bold transition duration-500 ease-in-out rounded-full flex items-center justify-center"
                   >
-                    <path
-                      fill="#ffffff"
-                      d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z"
-                    />
-                  </svg>
-                </div>
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg
+                      class="w-8 h-8 fill-white transition-colors duration-300"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>Whatsapp</title>
+                      <path
+                        d="M6.014 8.00613C6.12827 7.1024 7.30277 5.87414 8.23488 6.01043L8.23339 6.00894C9.14051 6.18132 9.85859 7.74261 10.2635 8.44465C10.5504 8.95402 10.3641 9.4701 10.0965 9.68787C9.7355 9.97883 9.17099 10.3803 9.28943 10.7834C9.5 11.5 12 14 13.2296 14.7107C13.695 14.9797 14.0325 14.2702 14.3207 13.9067C14.5301 13.6271 15.0466 13.46 15.5548 13.736C16.3138 14.178 17.0288 14.6917 17.69 15.27C18.0202 15.546 18.0977 15.9539 17.8689 16.385C17.4659 17.1443 16.3003 18.1456 15.4542 17.9421C13.9764 17.5868 8 15.27 6.08033 8.55801C5.97237 8.24048 5.99955 8.12044 6.014 8.00613Z"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z"
+                      />
+                    </svg>
+                  </div>
+                </a>
 
                 <span class="text-white text-sm mt-2">DAWG</span>
               </div>
               <div class="flex flex-col items-center">
-                <div
-                  class="w-14 h-14 bg-primary drop-shadow-sm hover:bg-primary-bold rounded-full flex items-center justify-center"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 640 640"
-                    class="w-7 h-7"
+                <a href="https://www.youtube.com" target="_blank">
+                  <div
+                    class="w-14 h-14 bg-primary drop-shadow-sm hover:bg-primary-bold rounded-full flex items-center justify-center"
                   >
-                    <path
-                      fill="#ffffff"
-                      d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z"
-                    />
-                  </svg>
-                </div>
+                    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg
+                      class="w-8 h-8 fill-white transition-colors duration-300"
+                      viewBox="0 -3 20 20"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <title>YouTube</title>
+                      <g
+                        id="Page-1"
+                        stroke="none"
+                        stroke-width="1"
+                        fill-rule="evenodd"
+                      >
+                        <g
+                          id="Dribbble-Light-Preview"
+                          transform="translate(-300.000000, -7442.000000)"
+                        >
+                          <g
+                            id="icons"
+                            transform="translate(56.000000, 160.000000)"
+                          >
+                            <path
+                              d="M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289"
+                              id="youtube-[#168]"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                </a>
+
+                <span class="text-white text-sm mt-2">DAWG</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <a href="https://www.tiktok.com/" target="_blank">
+                  <div
+                    class="w-14 h-14 bg-primary drop-shadow-sm hover:bg-primary-bold rounded-full flex items-center justify-center"
+                  >
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg
+                      class="w-8 h-8 fill-white transition-colors duration-300"
+                      viewBox="0 0 32 32"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>TikTok</title>
+                      <path
+                        d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
 
                 <span class="text-white text-sm mt-2">DAWG</span>
               </div>
@@ -320,23 +427,18 @@
         </div>
       </footer>
 
-      <div
-        id="modal"
-        class="hidden fixed inset-0 bg-transparent bg-opacity-70 items-center justify-center z-50"
-      >
-        <div class="bg-white rounded-2xl shadow-xl max-w-3xl w-full relative">
+      <dialog id="modal" class="flex place-self-center z-50">
+        <div id="modalContent" class="bg-white rounded-2xl shadow-xl">
+          <div id="modalBody" class="rounded-2xl"></div>
           <button
             id="closeModal"
-            class="absolute top-2 right-2 text-gray-600 hover:text-primary-bold text-xl font-bold"
+            class="hidden absolute top-2 left-2 text-slate-500 hover:text-primary-bold text-3xl font-bold cursor-pointer"
           >
             ✕
           </button>
-          <div
-            id="videoContainer"
-            class="aspect-video w-full rounded-2xl overflow-hidden"
-          ></div>
         </div>
-      </div>
+      </dialog>
     </div>
+
   </body>
 </html>
