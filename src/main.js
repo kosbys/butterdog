@@ -29,13 +29,14 @@ logo.addEventListener("click", () => {
     `;
 
     modal.showModal();
+    closeModal.classList.remove("hidden");
     clickCount = 0;
   }
 });
 
 contactButton.addEventListener("click", () => {
   modalBody.innerHTML = `
-      <form action="" class="">
+      <form action="" class="p-12">
       <div class="max-w-fit flex flex-col gap-4">
         <input
           type="text"
@@ -59,14 +60,17 @@ contactButton.addEventListener("click", () => {
           KACHOW
         </button>
       </div>
+      <div>hi</div>
     </form>
   `;
 
   modal.showModal();
+  closeModal.classList.remove("hidden");
 });
 
 closeModal.addEventListener("click", () => {
   modal.close();
+  closeModal.classList.add("hidden");
   modalBody.innerHTML = "";
 });
 
