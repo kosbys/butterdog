@@ -1,7 +1,8 @@
 import "./style.css";
 
 function closeModal() {
-  modal.close();
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
   modalCloseButton.classList.add("hidden");
   modalBody.innerHTML = "";
 }
@@ -34,7 +35,9 @@ logo.addEventListener("click", () => {
         </video>
     `;
 
-    modal.showModal();
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+
     modalCloseButton.classList.remove("hidden");
     clickCount = 0;
   }
@@ -78,7 +81,9 @@ contactButton.addEventListener("click", () => {
       </div>
   `;
 
-  modal.showModal();
+  modal.classList.add("flex");
+  modal.classList.remove("hidden");
+
   modalCloseButton.classList.remove("hidden");
 });
 
