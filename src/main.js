@@ -20,9 +20,6 @@ const modalCloseButton = document.getElementById("closeModal");
 const modalBody = document.getElementById("modalBody");
 const contactButton = document.getElementById("contactButton");
 
-const videoUrl =
-  "https://www.youtube.com/embed/8V5T6oUOEV4?si=Kekk_XrxlYG72Yo6?autoplay=1";
-
 logo.addEventListener("click", () => {
   clickCount++;
   if (clickCount === triggerClicks) {
