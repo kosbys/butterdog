@@ -11,3 +11,6 @@ play with colors purple
 <!-- USE SVG FILES INSTEAD OF INLINE SVG NO -->
 
 SPACINGS EVERYWHERE
+typography
+
+about section text
