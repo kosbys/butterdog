@@ -7,6 +7,55 @@ function closeModal() {
   modalBody.innerHTML = "";
 }
 
+function openModal() {
+  modalBody.innerHTML = `
+    <div class="p-12 bg-gray-100 shadow-xl flex flex-col gap-4">
+      <div class="text-center text-primary-bold text-2xl pb-4">השאירו פרטים ונוכל לדבר</div>
+      <form action="" class="flex flex-col justify-center">
+        <div class="flex flex-col gap-4">
+          <input
+            type="text"
+            required
+            placeholder="שם *"
+            class="w-full px-2 bg-white py-2 outline-1 outline-primary-bold"
+          />
+          <input
+            type="text"
+            required
+            placeholder="טלפון *"
+            class="w-full px-2 bg-white py-2 outline-1 outline-primary-bold"
+          />
+          <textarea
+            required
+            placeholder="הודעה *"
+            name=""
+            id=""
+            class="resize-y w-full px-2 bg-white py-2 outline-1 outline-primary-bold"
+          ></textarea>
+          <button
+            class="rounded-sm transition ease-in-out bg-primary px-4 py-2 hover:bg-primary-bold text-white duration-300 cursor-pointer"
+          >
+שלח/י          
+</button>
+        </div>
+      </form>
+      <div>
+        <div
+          class="text-center pt-4 flex flex-col text-primary-bold text-xl m-auto py-2 px-4 border-4 rounded-lg border-primary"
+        >
+          דברו איתי
+          <span>050-0000000</span>
+        </div>
+      </div>
+    </div>
+  `;
+
+  modal.classList.add("flex");
+  modal.classList.remove("hidden");
+
+  modalCloseButton.classList.remove("hidden");
+}
+
 document.querySelector("#hamburger").addEventListener("click", () => {
   document.querySelector("#hamburger").classList.toggle("open");
   document.querySelector("#menu").classList.toggle("hidden");
@@ -20,6 +69,7 @@ const modal = document.getElementById("modal");
 const modalCloseButton = document.getElementById("closeModal");
 const modalBody = document.getElementById("modalBody");
 const contactButton = document.getElementById("contactButton");
+const heroButton = document.getElementById("heroButton");
 
 logo.addEventListener("click", () => {
   clickCount++;
@@ -43,49 +93,8 @@ logo.addEventListener("click", () => {
   }
 });
 
-contactButton.addEventListener("click", () => {
-  modalBody.innerHTML = `
-      <div class="p-6 bg-gray-100 shadow-xl">
-      <div class="text-center">כותרת</div>
-        <form action="" class="flex flex-col justify-center">
-          <div class="flex flex-col p-6 gap-4 ">
-            <input
-              type="text"
-              required
-              placeholder="שם *"
-              class="w-full px-2 bg-white py-2 outline-1 outline-primary-bold"
-            />
-            <input
-              type="text"
-              required
-              placeholder="טלפון *"
-              class="w-full px-2 bg-white py-2 outline-1 outline-primary-bold"
-            />
-            <textarea
-              required
-              placeholder="הודעה *"
-              name=""
-              id=""
-              class="resize-y w-full px-2 bg-white py-2 outline-1 outline-primary-bold"
-            ></textarea>
-            <button
-              class="rounded-sm transition ease-in-out bg-primary px-4 py-2 hover:bg-primary-bold text-white duration-300 cursor-pointer"
-            >
-              שלח
-            </button>
-          </div>
-        </form>
-        <div class="text-center">
-          <div>דברו איתי 050-0000000</div>
-        </div>
-      </div>
-  `;
-
-  modal.classList.add("flex");
-  modal.classList.remove("hidden");
-
-  modalCloseButton.classList.remove("hidden");
-});
+contactButton.addEventListener("click", openModal);
+heroButton.addEventListener("click", openModal);
 
 modalCloseButton.addEventListener("click", closeModal);
 

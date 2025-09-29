@@ -1,16 +1,7 @@
-~~modal form~~
-~~move socials~~
-services section
-~~add button in top~~
-play with colors purple
+INCREASE HEADER TEXT SIZE
 
-~~STYLE MODAL FORM~~
-~~MAKE SERVICE SECTION~~
-~~PLAY WITH COLORS~~
+FORM
 
-<!-- USE SVG FILES INSTEAD OF INLINE SVG NO -->
+TYPOGRAPHY
 
-SPACINGS EVERYWHERE
-typography
-
-about section text
+CLEAN UP CODE
