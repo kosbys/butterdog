@@ -1,5 +1,18 @@
 import "./style.css";
 
+let clickCount = 0;
+const triggerClicks = 5;
+
+const logo = document.getElementById("logo");
+const modal = document.getElementById("modal");
+const modalCloseButton = document.getElementById("closeModal");
+const modalBody = document.getElementById("modalBody");
+const contactButton = document.getElementById("contactButton");
+const heroButton = document.getElementById("heroButton");
+const slides = document.getElementsByClassName("slide-image");
+const hamburger = document.querySelector("#hamburger");
+const hamburgerMenu = document.querySelector("#menu");
+
 function closeModal() {
   modal.classList.add("hidden");
   modal.classList.remove("flex");
@@ -35,8 +48,8 @@ function openModal() {
           <button
             class="rounded-sm transition ease-in-out bg-primary px-4 py-2 hover:bg-primary-bold text-white duration-300 cursor-pointer"
           >
-שלח/י          
-</button>
+          שלח/י          
+          </button>
         </div>
       </form>
       <div>
@@ -56,20 +69,10 @@ function openModal() {
   modalCloseButton.classList.remove("hidden");
 }
 
-document.querySelector("#hamburger").addEventListener("click", () => {
-  document.querySelector("#hamburger").classList.toggle("open");
-  document.querySelector("#menu").classList.toggle("hidden");
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("open");
+  hamburgerMenu.classList.toggle("hidden");
 });
-
-let clickCount = 0;
-const triggerClicks = 5;
-
-const logo = document.getElementById("logo");
-const modal = document.getElementById("modal");
-const modalCloseButton = document.getElementById("closeModal");
-const modalBody = document.getElementById("modalBody");
-const contactButton = document.getElementById("contactButton");
-const heroButton = document.getElementById("heroButton");
 
 logo.addEventListener("click", () => {
   clickCount++;
@@ -95,10 +98,7 @@ logo.addEventListener("click", () => {
 
 contactButton.addEventListener("click", openModal);
 heroButton.addEventListener("click", openModal);
-
 modalCloseButton.addEventListener("click", closeModal);
-
-const slides = document.getElementsByClassName("slide-image");
 
 let buffer = "";
 
@@ -115,7 +115,18 @@ document.addEventListener("keydown", (e) => {
 
   if (buffer === "cat") {
     [...slides].forEach((slide) => {
-      slide.src = "https://files.catbox.moe/4qdmme.jpg";
+      const rand = Math.floor(Math.random() * 2);
+      switch (rand) {
+        case 0:
+          slide.src = "https://files.catbox.moe/4qdmme.jpg";
+          break;
+        case 1:
+          slide.src =
+            "https://i.pinimg.com/originals/18/f3/6d/18f36d3c70be9d4fae7256335d1cdf90.png";
+          break;
+        default:
+          break;
+      }
     });
 
     document
