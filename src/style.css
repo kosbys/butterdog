@@ -5,7 +5,7 @@
   --font-rubik: "Rubik", sans-serif;
   --color-primary: #7a62a3;
   --color-primary-bold: #52388c;
-  --color-primary-light: #ac8be8;
+  --color-primary-light: #855ae1;
   --color-secondary: #8c3a40;
   --color-secondary-light: #ba6266;
   --color-secondary-bold: #60111e;
@@ -13,7 +13,7 @@
   --color-background-secondary: #fbffff;
 }
 
-.swiper {
+/* .swiper {
   margin: 0 !important;
 }
 
@@ -24,7 +24,7 @@
 
 .swiper-pagination-bullet-active {
   background: #52388c !important;
-}
+} */
 
 #hamburger {
   position: absolute;
