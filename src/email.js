@@ -22,7 +22,7 @@ function closeModal() {
 
 function openModal() {
   modalBody.innerHTML = `
-    <div class="p-12 bg-gray-100 shadow-xl flex flex-col gap-4">
+    <div class="p-12 bg-gray-100 shadow-xl flex flex-col gap-4 modal-container">
       <div class="text-center text-primary-bold text-2xl pb-4">השאירו פרטים ונוכל לדבר</div>
       <form id="contact-form" class="flex flex-col justify-center">
         <div class="flex flex-col gap-4">
@@ -34,9 +34,9 @@ function openModal() {
             class="w-full px-2 bg-white py-2 outline-1 outline-primary-bold"
           />
           <input
-            type="text"
             required
             placeholder="טלפון *"
+            type="num"
             name="phone"
             class="w-full px-2 bg-white py-2 outline-1 outline-primary-bold"
           />
@@ -48,7 +48,7 @@ function openModal() {
           ></textarea>
           <button
             type="submit"
-            class="rounded-sm transition ease-in-out bg-primary px-4 py-2 hover:bg-primary-bold text-white duration-300 cursor-pointer"
+            class="submit-button disabled:hover:bg-primary-light disabled:bg-primary-light disabled:opacity-40 disabled:cursor-none rounded-sm transition ease-in-out bg-primary px-4 py-2 hover:bg-primary-bold text-white duration-300 cursor-pointer"
           >
           שלח/י          
           </button>
@@ -74,11 +74,30 @@ function openModal() {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const modalContainer = document.querySelector(".modal-container");
+    const submitButton = document.querySelector(".submit-button");
+
+    const spinner = document.createElement("span");
+    spinner.classList.add("loader", "self-center");
+
+    modalContainer.appendChild(spinner);
+
+    // add spinner and disable button
+    submitButton.disabled = true;
+
     emailjs
       .sendForm("service_mtoxfuk", "template_dyfff5f", "#contact-form")
       .then(
         (res) => {
           console.log(res);
+          const message = document.createElement("span");
+          message.classList.add("text-center", "text-2xl", "text-primary-bold");
+          message.textContent = "תודה שפנית";
+
+          spinner.remove();
+          submitButton.disabled = false;
+
+          modalContainer.appendChild(message);
         },
         (error) => {
           console.error(error);
